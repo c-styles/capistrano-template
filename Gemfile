@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'capistrano', '~> 2.0'
+gem 'capistrano-ext'
+gem 'capistrano_colors'
+gem 'railsless-deploy'
