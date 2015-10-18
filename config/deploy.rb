@@ -22,4 +22,4 @@ role :db, *%w[
 ]
 
 set :user, "vagrant"
-set :password "vagrant"
+set :password, "vagrant"
