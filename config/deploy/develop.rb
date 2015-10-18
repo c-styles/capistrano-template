@@ -1,12 +1,12 @@
 # develop                                                                                                                                                                                                          #
 role :web, *%w[
-  localhost
+  ENV['HOSTNAME']
 ]
 role :db, *%w[
-  localhost
+  ENV['HOSTNAME']
 ]
 
-set :user, "deploy"
+set :user, ENV['CAP_DEPLOY_USER']
 set(:password) do
   Capistrano::CLI.password_prompt "Set password for develop server: "
 end
