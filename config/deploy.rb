@@ -13,7 +13,7 @@ set :branch, "2.8"
 set :deploy_to, "/home/vagrant/cakephp_2"
 set :deploy_via, :copy
 set :copy_dir, "/home/vagrant/tmp"
-set :use_sudo, false
+set :use_sudo, true
 
 role :web, *%w[
   localhost
