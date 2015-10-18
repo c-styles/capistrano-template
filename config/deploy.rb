@@ -13,14 +13,6 @@ set :branch, "2.8"
 set :deploy_to, "/home/vagrant/cakephp_2"
 set :deploy_via, :copy
 set :use_sudo, true
-after "change_permission"
-
-desc "アプリケーションの動作に必要なパーミッションの設定をします"
-task :change_permission, roles => :web do
-  run <<-CMD
-    chmod -R #{deploy_to}/current/app/tmp
-  CMD
-end
 
 role :web, *%w[
   localhost
@@ -30,6 +22,4 @@ role :db, *%w[
 ]
 
 set :user, "vagrant"
-set(:password) do
-  Capistrano::CLI.password_prompt "Set password for develop server: "
-end
+set :password "vagrant"
