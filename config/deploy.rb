@@ -21,5 +21,9 @@ role :db, *%w[
   localhost
 ]
 
+set :ssh_options, {
+   config: false
+}
+
 set :user, "vagrant"
 set :password, "vagrant"
