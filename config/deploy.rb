@@ -12,6 +12,7 @@ set :repository,  "https://github.com/cakephp/cakephp.git"
 set :branch, "2.8"
 set :deploy_to, "/home/vagrant/cakephp_2"
 set :deploy_via, :copy
+set :copy_dir, "/home/vagrant/tmp"
 set :use_sudo, false
 
 role :web, *%w[
